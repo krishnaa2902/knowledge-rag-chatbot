@@ -107,7 +107,7 @@ def chatbot_response(query):
     return response
 
 
-iface = gr.Interface(fn=chatbot_response, inputs="text", outputs="markdown", title="Azure AI Chatbot", description="Ask anything!")
+iface = gr.Interface(fn=chatbot_response, inputs="text", outputs="text", title="Azure AI Chatbot", description="Ask anything!")
 
 if __name__ == "__main__":
     iface.launch()
