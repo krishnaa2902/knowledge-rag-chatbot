@@ -16,9 +16,7 @@ workflow.add_node("agent", agent)  # agent
 retrieve = ToolNode([retrieval_tool])
 workflow.add_node("retrieve", retrieve)  # retrieval
 workflow.add_node("rewrite", rewrite)  # Re-writing the question
-workflow.add_node(
-    "generate", generate
-)
+workflow.add_node("generate", generate)
 
 # Call agent node to decide to retrieve or not
 workflow.add_edge(START, "agent")
